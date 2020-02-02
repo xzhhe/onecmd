@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'onecmd'
+OneCmd::Command.run(ARGV)
