@@ -1,5 +1,5 @@
 require 'fileutils'
-require 'onecmd/command/xcode/derived_data'
+require_relative 'xcode/rm_derived_data'
 
 module OneCmd
   class Command

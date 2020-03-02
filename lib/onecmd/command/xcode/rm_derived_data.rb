@@ -1,7 +1,7 @@
 module OneCmd
   class Command
     class Xcode < Command
-      class DerivedData < Xcode
+      class RmDerivedData < Xcode
         self.summary = 'for xcode derived data'
 
         self.description = <<-DESC
@@ -18,7 +18,9 @@ module OneCmd
         end
 
         def run
-          puts '🎉 remove derived data'
+          path = "#{ENV['HOME']}/Library/Developer/Xcode/DerivedData"
+          FileUtils.rm_rf(path)
+          puts "✅ rm derived data: #{path}"
         end
       end
     end

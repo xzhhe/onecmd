@@ -3,8 +3,8 @@ require 'claide'
 
 module OneCmd
   class Command < CLAide::Command
-    # include Options
-    require 'onecmd/command/xcode'
+    require_relative 'command/macosx'
+    require_relative 'command/xcode'
 
     self.abstract_command = true
     self.command = 'onecmd'
